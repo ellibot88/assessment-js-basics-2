@@ -55,7 +55,8 @@ const canWeDeliver = (zipcode) => {
   return `Sorry, we can't deliver there!`;
 };
 
-console.log(canWeDeliver(85206));
+console.log(canWeDeliver(84606));
+console.log(canWeDeliver(85213));
 /* 
     Problem 2 Continued
 
@@ -112,9 +113,11 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-let title = deals[0]["title"].replace("15", "10");
-console.log(title);
+deals[0]["title"] = deals[0]["title"].replace("15", "10");
+// console.log(title);
 console.log(deals);
+
+console.log(deals[0].title);
 
 /*
     The restaurant is going to continue its
@@ -129,5 +132,5 @@ console.log(deals);
     to be displaying wrong on the live site.
 */
 
-const update = deals[1]["desc"].trim().replace("March", "April");
-console.log(update);
+deals[1]["desc"] = deals[1]["desc"].trim().replace("March", "April");
+console.log(deals);
